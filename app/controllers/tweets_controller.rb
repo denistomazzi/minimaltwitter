@@ -12,8 +12,8 @@ class TweetsController < ApplicationController
         if session[:token].present?
             #get some tweets
             client = Twitter::REST::Client.new do |config|
-              config.consumer_key        = "Vcx7F1I6GdX5js8gOcdoe4wgA"
-              config.consumer_secret     = "1XlWoqvJhrJ9bY8D3kDOihtKUu1rOvK8IaKsVRuJ1g1Okjoh4j"
+              config.consumer_key        = ""
+              config.consumer_secret     = ""
               config.access_token        = session[:token]
               config.access_token_secret = session[:token_secret]
             end
