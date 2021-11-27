@@ -1,13 +1,5 @@
 class TweetsController < ApplicationController
 
- def index
-
-   if session[:token].present?
-     # get some tweets
-
-     class TweetsController &lt; ApplicationController
-
-
     def index
         if session[:token].present?
             #get some tweets
