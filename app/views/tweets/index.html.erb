@@ -1,0 +1,42 @@
+<h1> Minimal Twitter! </h1>
+
+<% if session[:token].present? %>
+
+
+ <p>
+   <%= session[:username] %>
+   <a href="/logout">Log out</a>
+</p>
+
+<% @tweets.each do |t| %>
+
+  <div>
+   <h2><%= Rinku.auto_link(tweet.text).html_safe %></h2>
+   <p>
+     <img src= "<%= tweet.user.profile_image_uri_https %>">
+     <%= tweet.user.screen_name %>
+   </p>
+
+   <p>
+
+       <%= tweet.retweet_count %>
+
+   </p>
+
+
+  </div>
+
+
+<% end %>
+
+
+<% else %>
+
+
+  <p>
+
+    <a href="/auth/twitter">Log in with Twitter</a>
+  </p>
+
+
+<% end %>
